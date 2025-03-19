@@ -1,0 +1,155 @@
+/* Responsive styles for SOC Analyst Portfolio */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+    /* Header & Navigation */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        box-shadow: var(--box-shadow);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.active {
+        max-height: 300px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Featured Project */
+    .project-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Page */
+    .profile-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-picture {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .experience-education {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects Page */
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 576px) {
+    /* Base Styles */
+    section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header */
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About Page */
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-info h2 {
+        font-size: 2rem;
+    }
+
+    /* Projects Page */
+    .projects-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-details h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Contact Page */
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        margin: 30px auto;
+    }
+
+    .modal-body {
+        padding: 30px 20px;
+    }
+}
