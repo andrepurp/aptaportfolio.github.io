@@ -68,6 +68,7 @@ h2 {
     font-size: 2rem;
     position: relative;
     padding-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg); /* Added margin-top for better spacing */
 }
 
 h2::after {
@@ -82,10 +83,12 @@ h2::after {
 
 h3 {
     font-size: 1.5rem;
+    margin-top: var(--spacing-lg); /* Added margin-top for better spacing */
 }
 
 p {
     margin-bottom: var(--spacing-md);
+    margin-top: 0; /* Explicit margin-top to ensure consistency */
 }
 
 a {
@@ -101,6 +104,8 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
+    display: block; /* Makes images block elements for better margin control */
+    margin: 0 auto var(--spacing-md); /* Centers images horizontally and adds bottom margin */
 }
 
 code {
@@ -108,6 +113,7 @@ code {
     background-color: var(--background-light);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
+    margin: 0 var(--spacing-xs); /* Added horizontal margin for inline code */
 }
 
 /* --- Container & Layout --- */
@@ -120,6 +126,7 @@ code {
 
 section {
     padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-lg); /* Added bottom margin between sections */
 }
 
 /* --- Header & Navigation --- */
@@ -139,11 +146,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px; /* Match container max-width for consistency */
 }
 
 .logo {
     display: flex;
     align-items: center;
+    margin-right: var(--spacing-lg); /* Added margin-right for spacing from nav */
 }
 
 .logo h1 {
@@ -159,6 +170,7 @@ nav ul {
     display: flex;
     list-style: none;
     gap: var(--spacing-lg);
+    margin: 0; /* Reset margin */
 }
 
 nav a {
@@ -167,6 +179,7 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    padding: var(--spacing-xs) 0; /* Added vertical padding for better touch target */
 }
 
 nav a.active {
@@ -196,6 +209,7 @@ nav a.active::after {
     color: var(--text-primary);
     font-size: 1.5rem;
     cursor: pointer;
+    margin-left: var(--spacing-md); /* Added margin for spacing */
 }
 
 /* --- Hero Section --- */
@@ -205,6 +219,8 @@ nav a.active::after {
     align-items: center;
     position: relative;
     overflow: hidden;
+    margin-top: 0; /* Reset margin to avoid unexpected spacing */
+    padding-top: 80px; /* Add padding to account for fixed header */
 }
 
 .hero::before {
@@ -220,17 +236,21 @@ nav a.active::after {
 
 .hero-content {
     max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 var(--spacing-lg); /* Added horizontal padding for smaller screens */
 }
 
 .hero-content h2 {
     font-size: 4rem;
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top for first element */
 }
 
 .hero-content h3 {
     font-size: 2rem;
     color: var(--accent-secondary);
     margin-bottom: var(--spacing-md);
+    margin-top: 0; /* Reset margin-top when following h2 */
 }
 
 .hero-content p {
@@ -249,6 +269,7 @@ nav a.active::after {
     font-family: var(--font-code);
     position: relative;
     margin-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-md); /* Added margin-top */
 }
 
 .hero .typing::after {
@@ -267,6 +288,7 @@ nav a.active::after {
 .cta-buttons {
     display: flex;
     gap: var(--spacing-md);
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 /* --- Button Styles --- */
@@ -280,6 +302,7 @@ nav a.active::after {
     transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
+    margin: 0; /* Reset margins to prevent unexpected spacing */
 }
 
 .primary-btn {
@@ -309,6 +332,7 @@ nav a.active::after {
     display: flex;
     gap: var(--spacing-xl);
     align-items: center;
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 .about-image {
@@ -316,6 +340,7 @@ nav a.active::after {
     position: relative;
     border-radius: var(--border-radius-md);
     overflow: hidden;
+    margin: var(--spacing-md); /* Added margin all around */
 }
 
 .about-image::after {
@@ -323,8 +348,8 @@ nav a.active::after {
     position: absolute;
     top: var(--spacing-md);
     left: var(--spacing-md);
-    width: 100%;
-    height: 100%;
+    width: calc(100% - var(--spacing-md)); /* Fixed width calculation */
+    height: calc(100% - var(--spacing-md)); /* Fixed height calculation */
     border: 2px solid var(--accent-primary);
     border-radius: var(--border-radius-md);
     z-index: -1;
@@ -332,6 +357,7 @@ nav a.active::after {
 
 .about-text {
     flex: 1;
+    padding-right: var(--spacing-md); /* Added right padding */
 }
 
 .about-text p {
@@ -343,6 +369,7 @@ nav a.active::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 .skill-category {
@@ -350,27 +377,34 @@ nav a.active::after {
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-lg);
     border-top: 3px solid var(--accent-primary);
+    margin-bottom: var(--spacing-md); /* Added margin-bottom for grid items */
 }
 
 .skill-category h3 {
     margin-bottom: var(--spacing-md);
+    margin-top: 0; /* Reset margin-top for first element in card */
     color: var(--accent-primary);
 }
 
 .skill-list {
     list-style-type: none;
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
 }
 
 .skill-list li {
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
+    padding-left: var(--spacing-md); /* Added padding-left for alignment */
+    position: relative; /* For pseudo-element positioning */
 }
 
 .skill-list li::before {
     content: '▸';
     color: var(--accent-secondary);
-    margin-right: var(--spacing-sm);
+    position: absolute;
+    left: 0;
 }
 
 /* --- Projects Section --- */
@@ -382,6 +416,7 @@ nav a.active::after {
 
 .projects-intro h2 {
     display: inline-block;
+    margin-top: 0; /* Reset margin-top for first element */
 }
 
 .projects-intro h2::after {
@@ -393,6 +428,7 @@ nav a.active::after {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl); /* Added margin-top */
 }
 
 .project {
@@ -403,6 +439,7 @@ nav a.active::after {
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    margin-bottom: var(--spacing-xl); /* Added margin-bottom */
 }
 
 .project:nth-child(even) {
@@ -420,6 +457,7 @@ nav a.active::after {
     background-color: var(--accent-primary);
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    margin: 0; /* Reset margins */
 }
 
 .project:hover .project-image {
@@ -430,10 +468,12 @@ nav a.active::after {
     padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
+    margin: 0; /* Reset margins */
 }
 
 .project-details h3 {
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top for first element in container */
 }
 
 .project-tags {
@@ -441,6 +481,7 @@ nav a.active::after {
     flex-wrap: wrap;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-xs); /* Added small margin-top */
 }
 
 .project-tags span {
@@ -450,6 +491,7 @@ nav a.active::after {
     border-radius: var(--border-radius-sm);
     font-family: var(--font-code);
     font-size: 0.8rem;
+    margin: 0 var(--spacing-xs) var(--spacing-xs) 0; /* Added margins for better spacing */
 }
 
 .project-links {
@@ -467,7 +509,8 @@ nav a.active::after {
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
+    margin: var(--spacing-xl) auto; /* Updated margins */
+    padding-left: var(--spacing-lg); /* Added left padding for timeline */
 }
 
 .timeline::before {
@@ -502,16 +545,19 @@ nav a.active::after {
     color: var(--accent-primary);
     font-family: var(--font-code);
     margin-bottom: var(--spacing-xs);
+    margin-top: 0; /* Reset margin-top */
 }
 
 .timeline-content h3 {
     margin-bottom: var(--spacing-xs);
+    margin-top: var(--spacing-xs); /* Reduced margin-top within timeline */
 }
 
 .timeline-content h4 {
     color: var(--text-secondary);
     font-weight: normal;
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top */
 }
 
 /* --- Certificate & Security Tools Sections --- */
@@ -519,6 +565,7 @@ nav a.active::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 .cert-card {
@@ -527,6 +574,7 @@ nav a.active::after {
     padding: var(--spacing-lg);
     border-left: 3px solid var(--accent-primary);
     transition: transform 0.3s ease;
+    margin-bottom: var(--spacing-md); /* Added margin-bottom for grid items */
 }
 
 .cert-card:hover {
@@ -535,18 +583,21 @@ nav a.active::after {
 
 .cert-card h3 {
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top for first element in card */
 }
 
 .cert-card .issuer {
     color: var(--text-secondary);
     display: block;
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top */
 }
 
 .cert-card .date {
     font-family: var(--font-code);
     color: var(--accent-secondary);
     font-size: 0.9rem;
+    margin-top: var(--spacing-xs); /* Added small margin-top */
 }
 
 /* --- Terminal Window (for case studies) --- */
@@ -555,6 +606,7 @@ nav a.active::after {
     border-radius: var(--border-radius-md);
     overflow: hidden;
     margin-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 .terminal-header {
@@ -562,17 +614,20 @@ nav a.active::after {
     padding: var(--spacing-sm) var(--spacing-md);
     display: flex;
     align-items: center;
+    margin: 0; /* Reset margins */
 }
 
 .terminal-buttons {
     display: flex;
     gap: 8px;
+    margin-right: var(--spacing-md); /* Added margin-right */
 }
 
 .terminal-button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    margin: 0; /* Reset margins */
 }
 
 .terminal-button.red {
@@ -600,6 +655,11 @@ nav a.active::after {
     font-family: var(--font-code);
     line-height: 1.5;
     white-space: pre-wrap;
+    margin: 0; /* Reset margins */
+}
+
+.terminal-prompt {
+    margin-bottom: var(--spacing-sm); /* Added margin-bottom */
 }
 
 .terminal-prompt::before {
@@ -610,6 +670,7 @@ nav a.active::after {
 .terminal-output {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-xs); /* Added small margin-top */
 }
 
 .terminal-highlight {
@@ -631,7 +692,7 @@ nav a.active::after {
 /* --- Contact Form --- */
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: var(--spacing-xl) auto; /* Updated margins */
     background-color: var(--background-light);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
@@ -657,6 +718,7 @@ input, textarea {
     color: var(--text-primary);
     font-family: var(--font-main);
     transition: border-color 0.3s ease;
+    margin-bottom: var(--spacing-xs); /* Added small margin-bottom */
 }
 
 input:focus, textarea:focus {
@@ -667,22 +729,26 @@ input:focus, textarea:focus {
 /* --- Contact Info --- */
 .contact-info {
     margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl); /* Added margin-bottom */
 }
 
 .contact-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 .contact-item {
     text-align: center;
     padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md); /* Added margin-bottom for grid items */
 }
 
 .contact-item h3 {
     color: var(--accent-primary);
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top for first element */
 }
 
 /* --- Footer --- */
@@ -698,16 +764,21 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-md);
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px; /* Match container max-width for consistency */
 }
 
 .social-links {
     display: flex;
     gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md); /* Added margin-bottom */
 }
 
 .social-links a {
     font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 var(--spacing-xs); /* Added horizontal margins */
 }
 
 .social-links a:hover {
@@ -718,7 +789,7 @@ footer {
 footer p {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    margin-bottom: 0;
+    margin-bottom: var(--spacing-md); /* Added margin-bottom */
 }
 
 /* --- Animations --- */
@@ -737,6 +808,7 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-lg); /* Added margin-top */
 }
 
 .metric-card {
@@ -745,6 +817,7 @@ footer p {
     padding: var(--spacing-lg);
     text-align: center;
     border-bottom: 3px solid var(--accent-primary);
+    margin-bottom: var(--spacing-md); /* Added margin-bottom for grid items */
 }
 
 .metric-number {
@@ -752,10 +825,12 @@ footer p {
     font-weight: 700;
     color: var(--accent-primary);
     margin-bottom: var(--spacing-sm);
+    margin-top: 0; /* Reset margin-top */
 }
 
 .metric-title {
     color: var(--text-secondary);
+    margin-top: 0; /* Reset margin-top */
 }
 
 /* Code block styling */
@@ -764,6 +839,7 @@ footer p {
     border-radius: var(--border-radius-md);
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-md); /* Added margin-top */
     font-family: var(--font-code);
     overflow-x: auto;
 }
@@ -771,6 +847,7 @@ footer p {
 .code-line {
     display: block;
     line-height: 1.5;
+    margin-bottom: var(--spacing-xs); /* Added small margin-bottom */
 }
 
 .code-comment {
@@ -791,4 +868,66 @@ footer p {
 
 .code-type {
     color: #4ec9b0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    /* Adjust spacing for smaller screens */
+    :root {
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    /* Adjust hero section */
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+    
+    .hero-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Make project layout single column */
+    .project {
+        grid-template-columns: 1fr;
+    }
+    
+    .project:nth-child(even) {
+        direction: ltr;
+    }
+    
+    /* Adjust about section */
+    .about-content {
+        flex-direction: column;
+    }
+    
+    /* Adjust spacing for containers */
+    .container {
+        width: 95%;
+        padding: var(--spacing-md) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce spacing */
+    :root {
+        --spacing-lg: 1.25rem;
+        --spacing-xl: 1.75rem;
+    }
+    
+    /* Smaller hero text */
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    /* Adjust button layout for smaller screens */
+    .cta-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Further adjust spacing for containers */
+    .container {
+        width: 92%;
+    }
 }
