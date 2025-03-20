@@ -18,9 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     consoleLog('Scanning environment...');
     consoleLog('Security check complete');
     consoleLog('Welcome to the security operations center');
-    
-    // Animate skill bars
-    animateSkillBars();
 });
 
 // Simulate typing effect
@@ -49,7 +46,6 @@ function consoleLog(message, type = 'info') {
     }
 }
 
-// Animate skill bars
 function animateSkillBars() {
     const skillLevels = document.querySelectorAll('.skill-level');
     
@@ -63,3 +59,11 @@ function animateSkillBars() {
         }, 300);
     });
 }
+
+// Add the function call to the DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing code...
+    
+    // Animate skill bars
+    animateSkillBars();
+});
