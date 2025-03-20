@@ -134,4 +134,4 @@ setInterval(() => {
     if (Math.random() > 0.7) {
         simulateSecurityAlert();
     }
-}, 15000);
+}, 5000);
