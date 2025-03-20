@@ -100,38 +100,3 @@ function consoleLog(message, type = 'info') {
         console.log(`%c[SOC] ${message}`, styles[type] || styles.info);
     }
 }
-
-// Simulate security alerts
-function simulateSecurityAlert() {
-    const alertTypes = [
-        {message: 'Potential brute force attempt detected', type: 'warning'},
-        {message: 'Suspicious IP connection blocked', type: 'error'},
-        {message: 'Integrity check passed', type: 'success'},
-        {message: 'New threat intelligence received', type: 'info'}
-    ];
-    
-    const randomAlert = alertTypes[Math.floor(Math.random() * alertTypes.length)];
-    consoleLog(randomAlert.message, randomAlert.type);
-    
-    // Create visual alert
-    const alertElement = document.createElement('div');
-    alertElement.classList.add('security-alert', randomAlert.type);
-    alertElement.textContent = randomAlert.message;
-    
-    document.body.appendChild(alertElement);
-    
-    // Remove after animation
-    setTimeout(() => {
-        alertElement.classList.add('fade-out');
-        setTimeout(() => {
-            alertElement.remove();
-        }, 1000);
-    }, 3000);
-}
-
-// Run security simulation occasionally
-setInterval(() => {
-    if (Math.random() > 0.7) {
-        simulateSecurityAlert();
-    }
-}, 5000);
