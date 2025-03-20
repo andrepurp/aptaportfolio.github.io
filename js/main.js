@@ -113,10 +113,19 @@ function simulateSecurityAlert() {
     const randomAlert = alertTypes[Math.floor(Math.random() * alertTypes.length)];
     consoleLog(randomAlert.message, randomAlert.type);
     
-    // Create visual alert
+    // Create visual alert with fixed positioning
     const alertElement = document.createElement('div');
     alertElement.classList.add('security-alert', randomAlert.type);
     alertElement.textContent = randomAlert.message;
+    
+    // Apply styles for overlay positioning
+    alertElement.style.position = 'fixed';
+    alertElement.style.top = '20px';
+    alertElement.style.right = '20px';
+    alertElement.style.zIndex = '1000'; // Ensure it appears on top of other elements
+    alertElement.style.padding = '12px 20px';
+    alertElement.style.borderRadius = '4px';
+    alertElement.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
     
     document.body.appendChild(alertElement);
     
