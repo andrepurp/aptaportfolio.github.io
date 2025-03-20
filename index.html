@@ -3,233 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe | SOC Analyst Portfolio</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>Your Name | SOC Analyst Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">SOC<span>{Analyst}</span></div>
-                <nav>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
             </div>
+            <div class="terminal-title">soc-analyst@security-operations:~</div>
         </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1 class="glitch" data-text="John Doe">John Doe</h1>
-            <h2 class="typing-effect">SOC Analyst & Cybersecurity Specialist<span class="cursor"></span></h2>
-            <p>Dedicated to detecting, analyzing, and responding to security threats in real-time</p>
-            <a href="#contact" class="btn">Get In Touch</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2><i class="fas fa-user-shield"></i> About Me</h2>
-            <div class="card">
-                <p>I am a passionate cybersecurity professional with expertise in Security Operations Center (SOC) analysis. With [X] years of experience, I specialize in threat detection, incident response, and security monitoring. My mission is to protect organizations from evolving cyber threats through vigilant analysis and proactive security measures.</p>
-                
-                <div class="code-block">
-                    whoami && echo "Cybersecurity enthusiast with a focus on blue team operations"
+        <div class="terminal-body">
+            <nav>
+                <ul class="main-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="content">
+                <div class="intro-section">
+                    <div class="typing-effect">
+                        <h1>> <span class="highlight">Your Name</span></h1>
+                        <h2>> SOC Analyst & Threat Hunter</h2>
+                        <p class="terminal-text">> Specialized in Security Monitoring, Threat Detection, and Incident Response</p>
+                        <p class="terminal-text">> Type <span class="command">help</span> or click a navigation link to explore</p>
+                    </div>
                 </div>
                 
-                <p>I hold certifications including [Your Certifications] and continuously expand my knowledge to stay ahead of emerging threats and security technologies.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2><i class="fas fa-laptop-code"></i> Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>SIEM Tools</h3>
-                    <p>Splunk, ELK Stack, QRadar</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>Network Security</h3>
-                    <p>Wireshark, Snort, pfSense</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-bug"></i></div>
-                    <h3>Threat Hunting</h3>
-                    <p>Yara, OpenIOC, MISP</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-file-code"></i></div>
-                    <h3>Scripting</h3>
-                    <p>Python, PowerShell, Bash</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-lock"></i></div>
-                    <h3>Endpoint Security</h3>
-                    <p>CrowdStrike, Carbon Black</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-clipboard-list"></i></div>
-                    <h3>Frameworks</h3>
-                    <p>MITRE ATT&CK, NIST</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2><i class="fas fa-project-diagram"></i> Security Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <!-- Replace with actual project image -->
-                        <div style="width:100%;height:100%;background-color:#121212;display:flex;align-items:center;justify-content:center;">
-                            <i class="fas fa-search fa-3x" style="color:var(--terminal-green)"></i>
+                <div class="skills-section">
+                    <h3>> Technical_Skills</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">SIEM Platforms</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
                         </div>
-                        <div class="project-overlay">
-                            <a href="#" class="btn">View Details</a>
+                        <div class="skill-item">
+                            <div class="skill-name">Threat Intelligence</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Network Security</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Incident Response</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Log Analysis</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Malware Analysis</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>SOC Monitoring Dashboard</h3>
-                        <p>Custom SIEM dashboard for real-time threat visualization and incident response coordination.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Splunk</span>
-                            <span class="project-tag">Dashboard</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <!-- Replace with actual project image -->
-                        <div style="width:100%;height:100%;background-color:#121212;display:flex;align-items:center;justify-content:center;">
-                            <i class="fas fa-robot fa-3x" style="color:var(--ice-blue)"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Automated Threat Intelligence</h3>
-                        <p>Script to automate collection and analysis of threat intelligence from multiple sources.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">API</span>
-                            <span class="project-tag">MISP</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <!-- Replace with actual project image -->
-                        <div style="width:100%;height:100%;background-color:#121212;display:flex;align-items:center;justify-content:center;">
-                            <i class="fas fa-file-alt fa-3x" style="color:var(--warning-red)"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Malware Analysis Lab</h3>
-                        <p>Secure environment setup for analyzing malicious files and understanding attack techniques.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">VirtualBox</span>
-                            <span class="project-tag">Cuckoo</span>
-                            <span class="project-tag">REMnux</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>SOC Analyst</h3>
-                        <h4>Company Name | 2022 - Present</h4>
-                        <ul>
-                            <li>Monitor and analyze security alerts from SIEM platforms</li>
-                            <li>Lead incident response for detected security threats</li>
-                            <li>Develop custom detection rules based on threat intelligence</li>
-                            <li>Perform regular threat hunting activities</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Cybersecurity Intern</h3>
-                        <h4>Company Name | 2021 - 2022</h4>
-                        <ul>
-                            <li>Assisted senior analysts with security monitoring</li>
-                            <li>Documented incident response procedures</li>
-                            <li>Participated in vulnerability assessment activities</li>
-                            <li>Created security awareness training materials</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Add more experience items as needed -->
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-            <div class="card">
-                <p>Interested in working together or have questions about my work? Feel free to reach out through any of the channels below:</p>
-                
-                <div class="code-block">
-                    echo "Let's connect and collaborate on cybersecurity initiatives!"
                 </div>
                 
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> Email: your.email@example.com</p>
-                    <p><i class="fas fa-phone"></i> Phone: (123) 456-7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Location: City, Country</p>
-                </div>
-                
-                <div class="social-links">
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <div class="featured-projects">
+                    <h3>> Featured_Projects</h3>
+                    <div class="project-cards">
+                        <div class="project-card">
+                            <h4>SIEM Implementation</h4>
+                            <p>Deployment and tuning of enterprise SIEM solution for enhanced threat detection.</p>
+                            <a href="projects.html#siem" class="view-project">View Details</a>
+                        </div>
+                        <div class="project-card">
+                            <h4>Threat Hunting Framework</h4>
+                            <p>Development of a systematic approach to identify unknown threats in the network.</p>
+                            <a href="projects.html#threathunting" class="view-project">View Details</a>
+                        </div>
+                        <div class="project-card">
+                            <h4>Incident Response Playbook</h4>
+                            <p>Created comprehensive IR documentation for common security incidents.</p>
+                            <a href="projects.html#playbook" class="view-project">View Details</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 John Doe | SOC Analyst Portfolio</p>
-            <div class="code-block">
-                while(true) { staySafe(); keepLearning(); }
-            </div>
+        <div class="terminal-footer">
+            <p>© <span id="current-year"></span> Your Name | SOC Analyst Portfolio</p>
         </div>
-    </footer>
-
-    <!-- JS Files -->
-    <script src="js/main.js"></script>
+    </div>
 </body>
 </html>
