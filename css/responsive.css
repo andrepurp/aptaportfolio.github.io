@@ -1,0 +1,91 @@
+/* Tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+  .terminal-container {
+      width: 95%;
+  }
+  
+  .project-cards {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+  
+  .terminal-container {
+      width: 100%;
+  }
+  
+  .terminal-body {
+      padding: 15px;
+  }
+  
+  .main-nav {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .main-nav li a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+  }
+  
+  .skill-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .project-cards {
+      grid-template-columns: 1fr;
+  }
+  
+  .typing-effect h1,
+  .typing-effect h2,
+  .typing-effect p {
+      white-space: normal;
+      animation: none;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .terminal-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .terminal-buttons {
+      margin-bottom: 5px;
+  }
+}
+
+/* For larger displays */
+@media screen and (min-width: 1440px) {
+  .terminal-container {
+      max-width: 1400px;
+  }
+  
+  .project-cards {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For print */
+@media print {
+  body {
+      background-color: white;
+      color: black;
+  }
+  
+  .terminal-container {
+      box-shadow: none;
+      border: 1px solid #ddd;
+  }
+  
+  .terminal-header, .terminal-footer {
+      display: none;
+  }
+}
