@@ -235,3 +235,23 @@ h3 {
   font-size: 14px;
   color: var(--text-secondary);
 }
+
+.protected-info {
+  background-color: var(--secondary-dark);
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  user-select: none;
+  transition: all 0.3s;
+}
+
+.protected-info:hover {
+  background-color: var(--highlight-blue);
+  color: var(--primary-dark);
+}
+
+.protected-info.revealed {
+  background-color: var(--primary-dark);
+  color: var(--highlight-blue);
+}
